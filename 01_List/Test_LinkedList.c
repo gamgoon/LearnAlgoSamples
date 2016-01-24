@@ -2,12 +2,12 @@
 //  main.c
 //  LearnAlgo
 //
-//  Created by 감윤욱 on 2016. 1. 21..
-//  Copyright © 2016년 감윤욱. All rights reserved.
+//  Created by gamgoon on 2016. 1. 21..
+//  Copyright © 2016년 gamgoon. All rights reserved.
 //
 
 #include <stdio.h>
-#include "CircularDoublyLinkedList.h"
+#include "LinkedList.h"
 
 int main(int argc, const char * argv[]) {
     int i = 0;
@@ -18,35 +18,35 @@ int main(int argc, const char * argv[]) {
     
     /* 노드 5개 추가 */
     for (i=0; i<5; i++) {
-        NewNode = CDLL_CreateNode(i);
-        CDLL_AppendNode(&List, NewNode);
+        NewNode = SLL_CreateNode(i);
+        SLL_AppendNode(&List, NewNode);
     }
     
+    NewNode = SLL_CreateNode(-1);
+    SLL_InsertNewHead(&List, NewNode);
+    
+    NewNode = SLL_CreateNode(-2);
+    SLL_InsertNewHead(&List, NewNode);
+    
     /* 리스트 출력 */
-    Count = CDLL_GetNodeCount(List);
+    Count = SLL_GetNodeCount(List);
     for (i = 0; i<Count; i++) {
-        Current = CDLL_GetNodeAt(List, i);
+        Current = SLL_GetNodeAt(List, i);
         printf("List[%d] : %d\n", i, Current->Data);
     }
     
     /* 리스트의 세번째 노드 뒤에 새 노드 삽입 */
     printf("\nInserting 3000 After [2]...\n\n");
     
-    Current = CDLL_GetNodeAt(List, 2);
-    NewNode = CDLL_CreateNode(3000);
+    Current = SLL_GetNodeAt(List, 2);
+    NewNode = SLL_CreateNode(3000);
     
-    CDLL_InsertAfter(Current, NewNode);
+    SLL_InsertAfter(Current, NewNode);
     
     /* 리스트 출력 */
-    Count = CDLL_GetNodeCount(List);
-    for (i = 0; i<Count*2; i++) {
-        if (i == 0)
-        {
-            Current = List;
-        }else{
-            Current = Current->NextNode;
-        }
-        
+    Count = SLL_GetNodeCount(List);
+    for (i = 0; i<Count; i++) {
+        Current = SLL_GetNodeAt(List, i);
         printf("List[%d] : %d\n", i, Current->Data);
     }
     
@@ -54,11 +54,11 @@ int main(int argc, const char * argv[]) {
     printf("\nDestroying  List...\n");
     
     for (i = 0; i<Count; i++) {
-        Current = CDLL_GetNodeAt(List, 0);
+        Current = SLL_GetNodeAt(List, 0);
         
         if (Current != NULL) {
-            CDLL_RemoveNode(&List, Current);
-            CDLL_DestroyNode(Current);
+            SLL_RemoveNode(&List, Current);
+            SLL_DestroyNode(Current);
         }
     }
     

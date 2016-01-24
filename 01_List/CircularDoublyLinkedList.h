@@ -2,8 +2,8 @@
 //  Circular Doubly LinkedList.h
 //  LearnAlgo
 //
-//  Created by 감윤욱 on 2016. 1. 21..
-//  Copyright © 2016년 감윤욱. All rights reserved.
+//  Created by gamgoon on 2016. 1. 21..
+//  Copyright © 2016년 gamgoon. All rights reserved.
 //
 
 #ifndef CIRCULAR_DOUBLY_LINKEDLIST_H
