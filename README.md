@@ -13,3 +13,7 @@
 - [Handcrafting Process Core Dumps](http://osxbook.com/book/bonus/chapter8/core/)
 - gdb 로 디버깅
 - [gdb를 통하여 디버깅을 하자](http://www.morenice.kr/66)
+- [GDB 사용법](http://kwanseob.blogspot.kr/2012/03/gdb.html)
+
+## Free-Store vs. Heap (difference)
+- [C++, Free-Store vs Heap - Stack Overflow](http://stackoverflow.com/questions/1350819/c-free-store-vs-heap)
