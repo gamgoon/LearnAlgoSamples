@@ -28,4 +28,4 @@
 # 참고 링크
 - [memmove() 메모리 영역 복사, 자기 영역도 가능](http://forum.falinux.com/zbxe/index.php?document_srl=408167&mid=C_LIB)
 
-# [포인터와 const 키워드](http://proneer.tistory.com/entry/C%EC%96%B8%EC%96%B4-%ED%8F%AC%EC%9D%B8%ED%84%B0%EC%99%80-const-%ED%82%A4%EC%9B%8C%EB%93%9C)
+- [포인터와 const 키워드](http://proneer.tistory.com/entry/C%EC%96%B8%EC%96%B4-%ED%8F%AC%EC%9D%B8%ED%84%B0%EC%99%80-const-%ED%82%A4%EC%9B%8C%EB%93%9C)
