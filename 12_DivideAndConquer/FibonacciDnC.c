@@ -7,6 +7,7 @@ typedef struct tagMatrix2x2
 	ULONG Data[2][2];
 } Matrix2x2;
 
+// 행렬 곱셈
 Matrix2x2 Matrix2x2_Multiply(Matrix2x2 A, Matrix2x2 B)
 {
 	Matrix2x2 C;
@@ -27,7 +28,7 @@ Matrix2x2 Matrix2x2_Power(Matrix2x2 A, int n)
 		A = Matrix2x2_Power(A, n/2);
 		A = Matrix2x2_Multiply(A,A);
 
-		if (n&1)
+		if (n&1)  // 홀수이면 n/2 수행 때 버려진 나머지 1을 보완한다.
 		{
 			Matrix2x2 B;
 			B.Data[0][0] = 1;
