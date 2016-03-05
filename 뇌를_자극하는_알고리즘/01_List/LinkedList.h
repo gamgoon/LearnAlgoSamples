@@ -29,4 +29,8 @@ void SLL_RemoveNode(Node** Head, Node* Remove);
 Node* SLL_GetNodeAt(Node* Head, int Location);
 int SLL_GetNodeCount(Node* Head);
 
+/* Quiz */
+// void SLL_InsertBefore(Node* Current, Node* NewNode);
+void SLL_DestroyAllNodes(Node* List);
+
 #endif /* LinkedList_h */

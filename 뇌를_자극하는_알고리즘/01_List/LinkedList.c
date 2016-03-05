@@ -167,3 +167,15 @@ void SLL_InsertNewHead(Node** Head, Node* NewNode){
         (*Head) = NewNode;  // 왜???
     }
 }
+
+// void SLL_InsertBefore(Node* Current, Node* NewNode);
+void SLL_DestroyAllNodes(Node* List)
+{
+    int i = 0;
+    Node* Current = SLL_GetNodeAt(List, i++);
+    while (Current != NULL) {
+        SLL_RemoveNode(&List, Current);
+        SLL_DestroyNode(Current);
+        Current = SLL_GetNodeAt(List, i++);
+    }
+}
